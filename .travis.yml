@@ -12,8 +12,8 @@ deploy:
     on:
       node: '6'
       tags: true
-  - provider: script
-    script: dir2/script2.sh
-    on:
-      node: '6'
-      tags: true
+  # - provider: script
+  #   script: dir2/script2.sh
+  #   on:
+  #     node: '6'
+  #     tags: true
