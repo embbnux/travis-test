@@ -3,11 +3,9 @@ node_js:
   - '6'
 before_deploy:
   - ./scripts/script.sh && cd dir1
-after_deploy:
-  - cd ..
 deploy:
   - provider: script
-    script: script1.sh
+    script: dir1/script1.sh
     skip_cleanup: true
     on:
       node: '6'
