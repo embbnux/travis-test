@@ -4,14 +4,13 @@ node_js:
 before_deploy:
   - ./scripts/script.sh && cd dir1
 deploy:
-  - provider: script
-    script: dir1/script1.sh
+  - provider: pages
     skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: docs/gh-pages
+    email: 'embbnux@embbnux.com'
+    name: 'Embbnux Ji'
     on:
+      branch: master
       node: '6'
       tags: true
-  # - provider: script
-  #   script: dir2/script2.sh
-  #   on:
-  #     node: '6'
-  #     tags: true
